@@ -1,0 +1,17 @@
+.categoryTitle {
+    background-color: green;
+    text-align: left;
+    margin-bottom: 1rem;
+    padding: 0.2rem;
+    font-size: 1.2rem;
+}
+
+.categoryContainer {
+    margin: 0% 10% 3%;
+}
+
+.nomineeContainer { 
+    display: grid;
+    grid-template-columns: 15rem 15rem 15rem;
+    grid-template-columns: 33% 33% 34%;
+}

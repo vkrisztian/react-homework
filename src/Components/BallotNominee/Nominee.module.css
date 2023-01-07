@@ -1,0 +1,28 @@
+.image {
+    max-width:10rem;
+    max-height:10rem;
+    width: auto;
+    height: auto;
+}
+
+.container {
+    background-color: #0e3e37;
+    margin: 1rem;
+    padding: 1.5rem;
+}
+
+.container.selected {
+    background-color: #009B86;
+}
+
+
+.title {
+    font-size: large;
+    margin-bottom: 0.5rem;
+}
+
+.button {
+    margin-top: 0.5rem;
+    background-color:  #0D2436;
+    cursor: pointer;
+}
