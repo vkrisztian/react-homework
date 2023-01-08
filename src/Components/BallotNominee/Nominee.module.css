@@ -32,3 +32,10 @@
     background-color:  #0D2436;
     cursor: pointer;
 }
+
+@media (max-width: 400px) {
+    .image {  
+        max-width:5rem;
+        max-height:5rem;
+    }
+}

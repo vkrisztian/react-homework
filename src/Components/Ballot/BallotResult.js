@@ -13,7 +13,7 @@ const BallotResult = (props) => {
                         <div style={{marginBottom: '1rem'}}>
                             {selection[item].title}
                         </div> :
-                        <div>
+                        <div style={{color: 'red'}}>
                             No selection for this category!
                         </div>
                     }

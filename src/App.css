@@ -26,6 +26,24 @@
   color: #61dafb;
 }
 
+.submit-button {
+  position: fixed;
+  bottom: 5rem;
+  right: 5rem;
+  color:  white;
+  cursor: pointer;
+  background-color: #009B86;
+  width: 10rem;
+  height: 3rem;
+  border-radius: 5%;
+  line-height: 3rem;
+}
+
+.submit-button:hover {
+  color:#CCCCCC ;
+  background-color: #34AC9C;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

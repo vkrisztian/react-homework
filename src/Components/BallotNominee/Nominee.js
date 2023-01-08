@@ -3,9 +3,9 @@ import styles from "./Nominee.module.css";
 const Nominee = (props) => {
 
     const selectedClass = props.selected ? styles.selected : '';
-    
+
     return (
-        <div className={`${styles.container} ${selectedClass}`}>        
+        <div id={props.nominee.id} className={`${styles.container} ${selectedClass}`}>        
             <div className={styles.title}>
                 {props.nominee.title}
             </div>
