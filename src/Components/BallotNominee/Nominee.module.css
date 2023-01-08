@@ -11,8 +11,14 @@
     padding: 1.5rem;
 }
 
+.container:hover {
+    background-color: #34AC9C ;
+    color: #CCCCCC;
+}
+
 .container.selected {
     background-color: #009B86;
+    color: #FFFFFF
 }
 
 
