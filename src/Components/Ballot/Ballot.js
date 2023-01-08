@@ -24,8 +24,6 @@ const Ballot = () => {
       setSelectionResult(initialSelection);
     }
 
-   
-
     fetchBallot().catch(console.error);
   }, []);
 

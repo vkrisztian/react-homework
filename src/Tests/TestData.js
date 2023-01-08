@@ -1,6 +1,12 @@
-import { MapBallot } from "./ApiMapper";
+import BallotCategory from "../Model/BallotCategory";
+import BallotModel from "../Model/BallotModel";
+import BallotNominee from "../Model/BallotNominee";
 
-let testData = { items: [
+export const testNominees = [new BallotNominee("nominee_title", "", "nominee_id"), new BallotNominee("nominee_title2", "", "nominee_id2")]
+export const testData = new BallotCategory("test_id", "test_title", testNominees);
+export const ballotTest = new BallotModel([testData]);
+
+export const apiTestData = { items: [
     {
       id: "best-picture",
       items: [
@@ -35,12 +41,3 @@ let testData = { items: [
     }
   ],
 }
-
-
-test("api mapping to model", () => {
-    const Mapped = MapBallot(testData);
-    expect(Mapped.ballotCategories.length).toBe(2);
-    expect(Mapped.ballotCategories[0].title).toBe("Best Picture");
-    expect(Mapped.ballotCategories[0].nominees.length).toBe(2);
-    expect(Mapped.ballotCategories[0].nominees[1].title).toBe("The Trial of the Chicago 7");
-});

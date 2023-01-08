@@ -1,19 +1,20 @@
-import { render } from "@testing-library/react";
+import { render, unmountComponentAtNode } from "react-dom";
 import { act } from "react-dom/test-utils";
-import BallotCategory from "../../Model/BallotCategory";
-import BallotNominee from "../../Model/BallotNominee";
-import Category from "./Category";
+import Category from "../Components/BallotCategory/Category";
+import { testData } from "./TestData";
+import { getElementByXpath } from "./TestHelper";
 
 let container = null;
-let testNominees = [new BallotNominee("nominee_title", "", "nominee_id"), new BallotNominee("nominee_title2", "", "nominee_id2")]
-let testData = new BallotCategory("test_id", "test_title", testNominees);
-function getElementByXpath(path) {
-    return document.evaluate(path, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
-}
 
 beforeEach(() => {
     container = document.createElement("div");
     document.body.appendChild(container);
+});
+
+afterEach(() => {
+    unmountComponentAtNode(container);
+    container.remove();
+    container = null;
 });
 
 test("category should render all nominees", () => {
