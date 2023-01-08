@@ -40,7 +40,7 @@ const Ballot = () => {
         {
           ballot?.ballotCategories?.map(category => {
             return <Category key={category.id} category={category} onSetSelection={(res) => setPartialSelection(res, category.title)}/>
-          })
+          }) ?? <div>Loading...</div>
         }
         <Modal>
           <BallotResult selection={selectionResult}/>
